@@ -1,4 +1,14 @@
-    <!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION['isLogin'])){
+    header("Location:login.php?msg=Authentication Error");
+    exit();
+}
+$username = $_SESSION['username'];
+
+?>   
+
+<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
@@ -11,7 +21,9 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+        echo 'Wlecome '.$username;
+        
         ?>
+        <a href="logout.php">Logout</a>
     </body>
 </html>

@@ -9,13 +9,17 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body>
+    <body style="text-align:center">
+        <form method="POST" action="checkLogin.php">
+            <br><br>
+            Username : <input type="text" name="username" required=""/><br><br>
+            Password : <input type="password" name="password" required=""/><br><br>
+            <input type="submit" value="Log In" name="submit"/><br><br>
+        </form>
        
         <?php
         // put your code here
-        var_dump($_GET);
-        echo '<br>';
-        var_dump($_POST);
+       
         ?>
     </body>
 </html>
