@@ -4,34 +4,28 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<html><head><h1 align='center'><b>IQ TEST</b></h1></head></html>
 <html>
     <head>
+        <img src="iqtest-en.gif" height="500" width="500">
         <meta charset="UTF-8">
-        <title></title>
+        <title>IQ TEST</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/js" href="style.sass"/>
     </head>
-    <style>
-
-{ margin: 0; padding: 0; }
-
-html { 
-        background: url('bb.png') no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}
-
-
-</style>
- <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
-    <body 
-       
-        <div style=" text-align: center" >
-            <h1 >Brain Busters</h1>
-            
-            <form method="POST" action="BrainBusters.php">
-             <input type="submit" name="Start" value="Start" style="height:50px; width:200px"/><br><br>
+    <body>
+        <div style="text-align:center"> 
+            <form method="post" action="Createuser.php">
+                
+                <input type="email" placeholder="Email              " name="email" required=""/><br><br>
+                <input type="password" placeholder="Password           " name="password" required=""/><br><br>
+                <input type="submit" value="Start IQ test" name="submit"/>
             </form>
-       
+            <?php 
+                if(isset($_GET['msg']))
+                    echo $_GET['msg'];
+            
+            ?>
+        </div>
     </body>
 </html>
